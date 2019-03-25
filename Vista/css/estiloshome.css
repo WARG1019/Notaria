@@ -1,0 +1,123 @@
+  .contenedor1{
+   
+   height:57px;
+   background:#d3d3d3;
+   
+   }
+
+   .logotipo{
+
+   width:130px;
+   height:57px;
+   margin-top:10px;
+   }
+   
+   .logotipo2{
+    width:260px;
+    height:57px;
+   }
+   
+
+
+    .siderbar{
+      position:fixed;
+      top:0;
+      left:0;
+      height:100%;
+      width:240px;
+      z-index:1;
+      background: rgba(212,228,239,1);
+      background: -moz-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 99%, rgba(134,174,204,1) 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(212,228,239,1)), color-stop(99%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,1)));
+      background: -webkit-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 99%, rgba(134,174,204,1) 100%);
+      background: -o-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 99%, rgba(134,174,204,1) 100%);
+      background: -ms-linear-gradient(left, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 99%, rgba(134,174,204,1) 100%);
+      background: linear-gradient(to right, rgba(212,228,239,1) 0%, rgba(212,228,239,1) 99%, rgba(134,174,204,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=1 );
+      overflow-x:hidden;
+      overflow-y:auto;
+      background:url(../img/31.png) lightgray;
+     }
+     
+     .menu{
+      padding-top:75px;
+     }
+
+      .menu #menu1 {
+      list-style: none; 
+      padding:0px;
+      width:100%;
+      }
+
+
+    .menu #menu1 li{
+    padding:0px 0px 0px 0px;
+    width:240px;
+    }
+
+
+
+    .menu #menu1 li a{
+    text-decoration:none;
+    display:block;
+    width:240px;
+    /*background:#0275D8;*/
+    }
+
+
+    .menu #menu1 li a:hover {
+    transition: .3s;
+    background-color:#D9534F;
+    color:white;
+    }
+
+  #enlace:visited{
+   color:black;
+  }
+
+  #enlace:link{
+   color:black;
+  }
+
+  .submenu{
+   list-style:none;
+   background-color:#A9A9A9;
+   padding:0px;
+   margin:0px;
+  }
+
+
+  .submenu li a{
+    padding:0px;
+    margin:0px;  
+    color:white;
+  }
+
+  .submenu li a:hover {
+    background-color:#0275D8;
+    background:#000000;
+  }
+
+  .tipografia{
+   
+    font-size:18px;
+    font-family: Roboto, Arial;
+
+   }
+
+
+  .tipografia2{
+
+   font-size:16px;
+   font-family: Roboto, Arial;
+   color:black; 
+
+  }
+
+  .tipografia3{
+
+  font-size:16px;
+  font-family: Roboto, Arial;
+  color:white;
+
+  }

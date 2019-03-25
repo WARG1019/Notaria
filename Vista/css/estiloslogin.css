@@ -1,0 +1,160 @@
+   body{
+     	background:#d3d3d3;
+     }
+		
+        
+        #contenedorlogin {
+		  width: 491px;
+		  height: 300px;
+		  margin:auto;
+		  border: 1px solid #000000;
+		  background: #d3d3d3;
+		  margin-top:118px;
+		  border-radius:25px;
+		  box-shadow: 10px 10px 4px 0px rgba(100,100,100,0.5);
+		  z-index:5;
+		}
+
+
+        @media screen and (max-width:400px){
+        
+          #contenedorlogin {
+		  width: 80%;
+		  height: 200px;
+		  margin:auto;
+		  border: 1px solid #000000;
+		  background: #d3d3d3;
+		  margin-top:128px;
+		  border-radius:25px;
+		  box-shadow: 10px 10px 4px 0px rgba(100,100,100,0.5);
+		  z-index:5;
+		}
+
+        }
+        
+        @media screen and (min-width: 401px) and (max-width: 500px){
+        
+          #contenedorlogin {
+		  width: 70%;
+		  height: 220px;
+		  margin:auto;
+		  border: 1px solid #000000;
+		  background: #d3d3d3;
+		  margin-top:128px;
+		  border-radius:25px;
+		  box-shadow: 10px 10px 4px 0px rgba(100,100,100,0.5);
+		  z-index:5;
+		}
+
+        }
+
+        @media screen and (min-width:501px) and (max-width:700px){
+         
+          #contenedorlogin {
+		  width: 70%;
+		  height: 250px;
+		  margin:auto;
+		  border: 1px solid #000000;
+		  background: #d3d3d3;
+		  margin-top:128px;
+		  border-radius:25px;
+		  box-shadow: 10px 10px 4px 0px rgba(100,100,100,0.5);
+		  z-index:5;
+		}
+
+        }
+
+
+        @media screen and (min-width:701px) and (max-width:800px){
+         
+          #contenedorlogin {
+		  width: 70%;
+		  height: 280px;
+		  margin:auto;
+		  border: 1px solid #000000;
+		  background: #d3d3d3;
+		  margin-top:128px;
+		  border-radius:25px;
+		  box-shadow: 10px 10px 4px 0px rgba(100,100,100,0.5);
+		  z-index:5;
+		}
+
+        }
+
+
+        .imagen{
+
+        	width:340px;
+        	height:100px;
+        	margin:auto;
+        	margin-top:16px;
+
+        }
+
+     
+      .usuario{
+
+       margin-top:20px;
+
+      }
+
+      
+      .fuente{
+      
+      font-size:15px;
+      font-family: Roboto, arial;
+
+      } 
+       
+     
+     .caja1{
+
+     	border-radius: 10px;
+     	height:60%;
+     }
+	
+
+	 .password{
+
+      margin-top:5px;
+
+	 }
+
+	 .boton{
+
+      color:white;
+      border-radius:10px;
+
+	 }
+
+	 .enlace{
+
+	 	margin-top:10px;
+	 }
+
+	 input{
+
+	 	padding:10px;
+	 }
+   
+
+   .caja1:focus{
+   
+   outline:0;
+
+   }
+
+   .submenu{
+
+    display:none;
+
+   }
+
+   
+
+ 
+
+
+
+ 	
+ 
