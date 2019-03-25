@@ -10,6 +10,5 @@ if(isset($_SESSION["usuario"])){
 }else{
     sleep(3);
 	header("Location:Vista/index.php");
-	
 }
 
