@@ -7,6 +7,8 @@ require "../Datos/conexion.php";
 class funciones{
 
 
+///////////////////////////////// Funciones de Pantalla inicial //////////////////////////////////
+
 function inicio(){
 
 $inicio ='
@@ -73,6 +75,8 @@ $inicio ='
 
 }
 
+
+////////////////////////////////// funciones de usuario ////////////////////////////////////////
 
 
 function usuario(){
@@ -250,7 +254,136 @@ function crear_usuario(){
 function mostrar_usuario(){
 
 
+
+
  
+
+}
+
+///////////////////////////////// Funciones de registro Civil /////////////////////////////////
+
+function registro_civil(){
+
+$registro ='<div class="container">
+
+       <div class="row">
+
+          <div class="col-12 col-md-12">
+
+
+         <a href="#" class="btn btn-primary" style="width:140px; height:152px;">
+          
+          <br>
+
+          <img class="figure img-fluid text-center" src="img/icono101.png" width="35px" height="35px">
+
+      
+           <strong><p class="text-center mt-0 tipografia3">Modificar <br>Registro Civil</p></strong>
+
+
+         </a>
+         <a href="#" class="btn btn-info" style="width:140px; height:152px;">
+          
+          <br>
+
+          <img class="figure img-fluid text-center" src="img/icono100.png" width="35px" height="35px">
+      
+
+           <strong><p class="text-center mt-0 tipografia3">Consultar Registro Civil</p></strong>
+
+         </a>
+         <a href="#" class="btn btn-success" style="width:140px; height:152px;">
+          
+          <br>
+
+          <img class="figure img-fluid text-center" src="img/icono84.png" width="28px" height="28px">
+
+      
+           <strong><p class="text-center mt-0 tipografia3">Imprimir <br>Registro Civil</p></strong>
+
+         </a>
+
+
+          </div>
+     </div>
+  </div>';
+
+  echo $registro;
+
+
+}
+
+
+function subir_registro(){
+
+ $subir = '
+          <div class="container" style="width:750px;">
+            <div class="row">       
+              <div class="col-12 col-md-12">
+                  <br>
+                  <h2>Almacenar Registro Civil</h2>
+                   <br>
+                    <form  method="post" action="login.php" id="formcreus">
+
+                        <input type="hidden" name="b" value="1">
+                        <input type="hidden" name="c" value="3">
+
+
+                        <div class="form-group row">
+                                                      
+                                      <div class=" col-10 ">
+                                          <label for="identificacion">NUIP</label>
+                                            <input type="text"  class="form-control" name="iden" placeholder="Identificacion">
+                                    </div>
+                                </div>
+
+                      <div class="form-group row">
+                                                      
+                           <div class=" col-10 col-md-5">
+                                <label for="usuario">Nombre</label>
+                                    <input type="text"  class="form-control" name="nome" placeholder="Nombre">
+                            </div>
+                              
+                               <div class=" col-10 col-md-5">
+                                  <label for="apellido ">Apellido</label>
+                                        <input type="text"  class="form-control" name="ape"  placeholder="Apellido"> 
+                               </div>
+                                                  
+                      </div>
+                                            
+                                  
+                                  <div class="form-group row">                        
+                                    <div class=" col-10">
+                                     <label for="fechanacimiento">fecha de Nacimiento</label>
+                                        <input type="text" class="form-control" name="cor" id="email" placeholder="Fecha de Nacimiento">
+                                        </div>
+                                            
+                                  </div>                       
+                                  
+              
+                           
+                           <div class="form-group row">     
+
+                             <div class=" col-12 col-md-10">
+                                 <label for="perfil">Perfil del Usuario</label>
+                                    <input type="text" class="form-control" placeholder="Perfil del Usuario" name="perfil" id="perfil">';
+                                   // $this -> seleccion3("usuarios","perfil","where perfil = ".$_SESSION["perfil"]).''
+                                $subir.='</div>
+                           </div>         
+                           
+                           
+            
+                                      <button class="btn btn-primary  btn-block btn-sm ml-2 mt-5" type="submit" name="gcli" style="width:80%; height:50px;">Guardar</button>
+                                
+
+                                 <br>
+                                 <br>
+
+                     </form>
+                    </div>
+                   </div>
+                 </div>';
+                 echo $subir;
 
 }
 

@@ -112,7 +112,7 @@ if($_SESSION["perfil"] == "administrador"){
 			                      
 					          </a>
 					       <ul class="submenu">
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono81.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subir Registro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+			                <li><a class="text-right tipografia2" href="?b=5&c=5"><img src="img/icono81.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subir Registro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 			                <li><a class="text-right tipografia2" href="#"><img src="img/icono82.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consultar Registros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 			                <li><a class="text-right tipografia2" href="#"><img src="img/icono83.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enviar Validacion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
 			                <li><a class="text-right tipografia2" href="#">Modificar Registros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
@@ -257,6 +257,8 @@ if($_SESSION["perfil"] == "administrador"){
 
             case 5:
 
+            echo $metodo -> registro_civil();
+
 
             break;
 
@@ -316,7 +318,7 @@ if($_SESSION["perfil"] == "administrador"){
                         
                         case 5: 
 
-                        //echo $metodo -> crear_evento();  
+                        echo $metodo -> subir_registro();  
                           
                         break;  
 
