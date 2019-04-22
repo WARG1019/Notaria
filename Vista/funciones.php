@@ -1,10 +1,10 @@
 <?php
 
 
-require "../Datos/conexion.php";
+include "../Datos/conexion.php";
+require "../Controlador/usuarioControlador.php";
 
-
-class funciones{
+class funciones extends usuarioControlador{
 
 
 ///////////////////////////////// Funciones de Pantalla inicial //////////////////////////////////
@@ -13,61 +13,57 @@ function inicio(){
 
 $inicio ='
 
-    <div class="container">
+        
 
-       <div class="row">
+          <div class="col-12 col-md-10 ml-5">
 
-          <div class="col-12 col-md-12">
            
-           <button class="btn btn-success" style="width:140px; height:152px;">
+                 <button class="btn btn-success" style="width:140px; height:152px;">
+                
+                <strong><p class="text-center" style="font-size:35px; font-family:Roboto;">136</p></strong>
+
+                <img class="figure img-fluid text-center" src="img/20098.png" width="28px; height="28px";>
+            
+                 <strong><p class="text-center mt-0 tipografia3">Registros Civil</p></strong>
+
+               </button>
+
+               <button class="btn btn-primary" style="width:140px; height:152px;">
+               
+               <strong><p class="text-center" style="font-size:35px; font-family:Roboto;">236</p></strong>
+
+                <img class="figure img-fluid text-center" src="img/780270.png" width="28px" height="28px">
+            
+                 <strong><p class="text-center mt-0 tipografia3">Actas <br> de Matrimonio</p></strong>
+
+
+               </button>
+               <button class="btn btn-warning" style="width:140px; height:152px;">
+                
+                <strong><p class="text-center tipografia3" style="font-size:35px; font-family:Roboto;">56</p></strong>
+
+                <img class="figure img-fluid text-center" src="img/Untitled-17-512.png" width="28px" height="28px">
+            
+                 <strong><p class="text-center mt-0 tipografia3">Actas <br>de Defuncion</p></strong>
+
+               </button>
+               <button class="btn btn-info" style="width:140px; height:152px;">
+                
+                <strong><p class="text-center tipografia3" style="font-size:35px; font-family:Roboto;">23</p></strong>
+
+                <img class="figure img-fluid text-center" src="img/1199010.png" width="28px" height="28px">
+            
+                 <strong><p class="text-center mt-0 tipografia3">Escritura</p></strong>
+
+               </button>
+
+
+                </div>
+
+                <div class="col-md-8 mt-5">
+                <img class="figure"src="img/supernotariado.jpg" alt="">
+               </div>
           
-          <strong><p class="text-center" style="font-size:35px; font-family:Roboto;">136</p></strong>
-
-          <img class="figure img-fluid text-center" src="img/20098.png" width="28px; height="28px";>
-      
-           <strong><p class="text-center mt-0 tipografia3">Registros Civil</p></strong>
-
-         </button>
-
-         <button class="btn btn-primary" style="width:140px; height:152px;">
-         
-         <strong><p class="text-center" style="font-size:35px; font-family:Roboto;">236</p></strong>
-
-          <img class="figure img-fluid text-center" src="img/780270.png" width="28px" height="28px">
-      
-           <strong><p class="text-center mt-0 tipografia3">Actas <br> de Matrimonio</p></strong>
-
-
-         </button>
-         <button class="btn btn-warning" style="width:140px; height:152px;">
-          
-          <strong><p class="text-center tipografia3" style="font-size:35px; font-family:Roboto;">56</p></strong>
-
-          <img class="figure img-fluid text-center" src="img/Untitled-17-512.png" width="28px" height="28px">
-      
-           <strong><p class="text-center mt-0 tipografia3">Actas <br>de Defuncion</p></strong>
-
-         </button>
-         <button class="btn btn-info" style="width:140px; height:152px;">
-          
-          <strong><p class="text-center tipografia3" style="font-size:35px; font-family:Roboto;">23</p></strong>
-
-          <img class="figure img-fluid text-center" src="img/1199010.png" width="28px" height="28px">
-      
-           <strong><p class="text-center mt-0 tipografia3">Escritura</p></strong>
-
-         </button>
-
-
-          </div>
-
-          <div class="col-md-8 mt-5">
-          <img class="figure"src="img/supernotariado.jpg" alt="">
-         </div>
-
-       </div>
-      
-
       </div>';
 
          echo $inicio;
@@ -84,10 +80,6 @@ function usuario(){
   
 
 $user='
-
-      <div class="container">
-
-       <div class="row">
 
           <div class="col-12 col-md-12">
 
@@ -145,19 +137,22 @@ $user='
 }
 
 
+
+
+
 function crear_usuario(){
 
+
   $creus='
-    <div class="container" style="width:750px;">
-            <div class="row">       
+           
               <div class="col-12 col-md-12">
                   <br>
                   <h2>Formulario Creacion Usuario</h2>
                    <br>
-                    <form  method="post" action="login.php" id="formcreus">
+                    <form  method="post" action="home.php" id="formcreus">
 
                         <input type="hidden" name="b" value="1">
-                        <input type="hidden" name="c" value="3">
+                        <input type="hidden" name="c" value="3"> 
 
                       <div class="form-group row">
                                                       
@@ -198,7 +193,7 @@ function crear_usuario(){
 
                            <div class="form-group row">
                                                       
-                              <div class=" col-12 col-md-10">
+                              <div class=" col-10">
                                  <label for="movil">Movil (telefono)</label>
                                     <input type="text" class="form-control" placeholder="Telefono movil" name="movil" id="movil">
                                 </div>
@@ -207,30 +202,23 @@ function crear_usuario(){
                            
                            <div class="form-group row">     
 
-                             <div class=" col-12 col-md-10">
-                                 <label for="perfil">Perfil del Usuario</label>
-                                    <input type="text" class="form-control" placeholder="Perfil del Usuario" name="perfil" id="perfil">';
-                                   // $this -> seleccion3("usuarios","perfil","where perfil = ".$_SESSION["perfil"]).''
-                                $creus.='</div>
+                             <div class="col-10">
+                                 <label for="perfil">Perfil del Usuario</label>'.
+                                   //$this -> input("usuarios","perfil","WHERE perfil = 'administrador'", "nom_usu","", "nom_usu", "text")
+                                   $this->seleccion2("usuarios", "perfil", "", "nom_usu", "nom_usu").
+                                   '</div>
                            </div>         
-                          
-
-                         <div class="form-group row">
-                            <div class=" col-12 col-md-10">
-                                  <label for="sucursal">Sucursal</label>
-                                      <input type="text" class="form-control" placeholder="Sucursal" name="Sucursal" id="sucursal">
-                                  </div>
-                           </div>    
+                           
 
                           <div class="form-group row"> 
-                             <div class=" col-12 col-md-10">
+                             <div class="col-10">
                                    <label for="user">Usuario</label>
                                       <input type="text" class="form-control" placeholder="user" name="user" id="user">
                                   </div>
                            </div>    
                            
                             <div class="form-group row"> 
-                             <div class=" col-12 col-md-10">
+                             <div class="col-10">
                                    <label for="password">Password</label>
                                       <input type="password" class="form-control" placeholder="password" name="password" id="password">
                                   </div>
@@ -244,11 +232,15 @@ function crear_usuario(){
                                  <br>
 
                      </form>
-                    </div>
-                   </div>
-                 </div>';
+                    </div>';
                  echo $creus;
 }
+
+
+
+
+
+
 
 
 function mostrar_usuario(){
@@ -264,12 +256,9 @@ function mostrar_usuario(){
 
 function registro_civil(){
 
-$registro ='<div class="container">
+$registro ='
 
-       <div class="row">
-
-          <div class="col-12 col-md-12">
-
+      <div class="col-md-12">
 
          <a href="#" class="btn btn-primary" style="width:140px; height:152px;">
           
@@ -303,10 +292,17 @@ $registro ='<div class="container">
 
          </a>
 
+         <a href="home.php?b=5" class="btn btn-danger" style="width:140px; height:152px;">
+          
+          <br>
 
-          </div>
-     </div>
-  </div>';
+          <img class="figure img-fluid text-center" src="img/icons8-documents-48.png" width="35px" height="35px">
+
+      
+           <strong><p class="text-center mt-0 tipografia3">Registro Civil</p></strong>
+
+         </a>
+      </div>';
 
   echo $registro;
 
@@ -316,14 +312,12 @@ $registro ='<div class="container">
 
 function subir_registro(){
 
- $subir = '
-          <div class="container" style="width:750px;">
-            <div class="row">       
-              <div class="col-12 col-md-12">
+ $subir = '      
+              <div class="col-md-12">   
                   <br>
                   <h2>Almacenar Registro Civil</h2>
                    <br>
-                    <form  method="post" action="login.php" id="formcreus">
+                    <form  method="post" action="home.php" id="formcreus">
 
                         <input type="hidden" name="b" value="1">
                         <input type="hidden" name="c" value="3">
@@ -366,9 +360,7 @@ function subir_registro(){
 
                              <div class=" col-12 col-md-10">
                                  <label for="perfil">Perfil del Usuario</label>
-                                    <input type="text" class="form-control" placeholder="Perfil del Usuario" name="perfil" id="perfil">';
-                                   // $this -> seleccion3("usuarios","perfil","where perfil = ".$_SESSION["perfil"]).''
-                                $subir.='</div>
+                                    <input type="text" class="form-control" placeholder="Perfil del Usuario" name="perfil" id="perfil"></div>
                            </div>         
                            
                            
@@ -380,20 +372,13 @@ function subir_registro(){
                                  <br>
 
                      </form>
-                    </div>
-                   </div>
+
                  </div>';
+
                  echo $subir;
 
 }
 
-
-
-function seleccion3($tabla,$campo,$cond){
- $this->query="select ".$campo." from ".$tabla." ".$cond;
-  //echo $this->query;
- $this->cons=mysqli_query($this->query);
-}
 
 
 

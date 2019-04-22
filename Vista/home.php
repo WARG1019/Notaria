@@ -1,6 +1,7 @@
 <?php
 
-require("funciones.php");
+
+require "funciones.php";
 
 session_start();
 
@@ -50,46 +51,65 @@ if($_SESSION["perfil"] == "administrador"){
     
     <style>
 
+     @media screen and (max-width: 1300px){
+
+     .contenedor0{
+
+      width:1100px;
+
+     }
+
+    }
+
     .container{
 
      width:900px;
      margin:auto;
      	
     }
+
+    /*.contenedor0{
+
+     max-width:1400px;
+     min-width:300px;
+
+    }*/
    
     </style>
 
 </head>
 <body>
 
-<div class="container-fluid contenedor1 fixed-top">
-	<div class="row">
-		<div class="col-3">
-		   <div class="logotipo">
-            <img class="figure img-fluid" src="img/SNR1.png"/>
+    <div class="container-fluid contenedor1 fixed-top">
+    	<div class="row">
+    		
+        <div class="col-3">
+    		   <div class="logotipo">
+                <img class="figure img-fluid" src="img/SNR1.png"/>
+                </div>
             </div>
-        </div>
-            <div class="col-2">
-            
-            </div>
-           
-           <div class="col-3">
-            <div class="logotipo2">
-            <img class="figure img-fluid" src="img/Minjusticia_Colombia.svg"/>
-            </div>
-           </div>
 
-           <div class="col-4">
+                <div class="col-md-2 col-2 d-none d-md-block">
+                
+                </div>
+               
+               <div class="col-md-3 d-none d-lg-block">
+                <div class="logotipo2 d-none d-lg-block">
+                  <img class="figure img-fluid" src="img/Minjusticia_Colombia.svg"/>
+                </div>
+               </div>
 
-           <h5 class="text-center mt-4 tipografia"><strong> Usuario : <?php echo $_SESSION["usuario"]; ?> </strong></h5>
-         
-           </div>
+               <div class="col-md-4 col-8">
+
+               <h5 class="text-right mt-4 tipografia"><strong> Usuario : <?php echo $_SESSION["usuario"]; ?> </strong></h5>
+             
+               </div>
 
 
-	</div>
-</div>
+    	</div>
+    </div>
 
-<div class="siderbar">
+<div class="siderbar d-none d-xl-block">
      <div class="row">
        <div class="col-12 col-md-12">
            <nav class="menu topnav">
@@ -106,17 +126,16 @@ if($_SESSION["perfil"] == "administrador"){
                     <li>
 	                         
 	                          <a href="#" class="text-center tipografia2 has-arrow" aria-expanded="false" id="enlace">
-	                               <img class="figure img-fluid text-center" src="img/20098.png" width="28px" height="28px">   
+	                               <img class="figure img-fluid text-center" src="img/icons8-documents-48.png" width="35px" height="35px">   
 					                   <br>
 					                   <strong>Registro Civil</strong>
 			                      
 					          </a>
 					       <ul class="submenu">
-			                <li><a class="text-right tipografia2" href="?b=5&c=5"><img src="img/icono81.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subir Registro&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono82.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consultar Registros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono83.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enviar Validacion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#">Modificar Registros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imprimir Registros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+			                <li><a class="text-left tipografia2" href="?b=5&c=5"><img src="img/icono103.png" class="figure img-fluid" width="28px" height="28px" alt="">Almacenar Registro</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono82.png" class="figure img-fluid" width="24px" height="24px" alt="">Consultar Registros</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono83.png" class="figure img-fluid" width="24px" height="24px" alt="">Enviar y Validar</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px" alt="">Imprimir Registros</a></li>
 			            </ul>
                    </li>
                    <li>
@@ -128,11 +147,11 @@ if($_SESSION["perfil"] == "administrador"){
 				             </a>
 
 				             <ul class="submenu">
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono85.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subir Acta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			            <li><a class="text-right tipografia2" href="#"><img src="img/icono86.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consultar Actas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono88.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Divorcios&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono89.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Anulaciones&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imprimir Actas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono85.png" class="figure img-fluid" width="24px" height="24px" alt="">Alm. Acta Matrimonial</a></li>
+			            <li><a class="text-left tipografia2" href="#"><img src="img/icono86.png" class="figure img-fluid" width="24px" height="24px">Consultar Actas</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono88.png" class="figure img-fluid" width="24px" height="24px">Divorcios</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono89.png" class="figure img-fluid" width="24px" height="24px">Anulaciones</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px">Impresiones de Actas</a></li>
 			            </ul>
    
                    </li>
@@ -146,10 +165,10 @@ if($_SESSION["perfil"] == "administrador"){
 				              </a>
 
 				              <ul class="submenu">
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono81.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subir Acta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono90.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consultar Actas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono83.png" class="figure img-fluid" width="24px" height="24px" alt="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Enviar Validacion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imprimir Actas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono81.png" class="figure img-fluid" width="24px" height="24px" alt="">Subir Acta</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono90.png" class="figure img-fluid" width="24px" height="24px" alt="">Consultar Actas</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono83.png" class="figure img-fluid" width="24px" height="24px" alt="">Enviar Validacion</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px">Imprimir Actas</a></li>
 			            </ul>
 				     
                    </li>
@@ -165,10 +184,10 @@ if($_SESSION["perfil"] == "administrador"){
 				               </a>
 
 				         <ul class="submenu">
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono91.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subir Escritura&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono92.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consultar Escrituras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono93.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Traspasos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-			                <li><a class="text-right tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Imprimir Escritura&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono91.png" class="figure img-fluid" width="24px" height="24px">Subir Escritura</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono92.png" class="figure img-fluid" width="24px" height="24px">Consultar Escritura</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono93.png" class="figure img-fluid" width="24px" height="24px">Traspasos</a></li>
+			                <li><a class="text-left tipografia2" href="#"><img src="img/icono84.png" class="figure img-fluid" width="24px" height="24px">Imprimir Escritura</a></li>
 			            </ul>
 			  
                    </li>
@@ -218,101 +237,107 @@ if($_SESSION["perfil"] == "administrador"){
 </div>
 
 
-
-<section class="container mt-5 mr-5">
-	<section class="row justify-content-between ml-0 mt-5">
-		<div class="col-md-12 mt-5 ml-5">
-
-        <?php
+  <section class="container contenedor col-md-12 col-md-9 mt-5">
+        <section class="row">
+           <article class="col-12 mt-3">
+              <div class="card pt-5 pr-5 pl-5 pb-5" style="border:none;">
+                  <div class="card-block">
+                    <div class="container">
+                        <div class="row nuevocontenedor justify-content-around">  
+                         
+                          <?php
         
-        $metodo = new funciones();
+                        $metodo = new funciones();
 
-        if(isset($g)){
-         
-           switch($g){
-            
-            case 1:
+                        if(isset($g)){
+                         
+                           switch($g){
+                            
+                            case 1:
 
-            echo $metodo -> inicio();
+                            echo $metodo -> inicio();
 
-            break;
+                            break;
 
-            case 2: 
+                            case 2: 
 
-            echo $metodo -> inicio2();
-             
-            break;
-            
-            case 3:
-            
+                            echo $metodo -> inicio2();
+                             
+                            break;
+                            
+                            case 3:
+                            
 
-            break;
-
-
-            case 4:
+                            break;
 
 
-            break;
+                            case 4:
 
 
-            case 5:
-
-            echo $metodo -> registro_civil();
+                            break;
 
 
-            break;
+                            case 5:
 
-            case 6:
-
-
-            break;
-
-            case 7:
-
-            echo $metodo -> usuario(); 
-            
-            break;
-       
-           }
-
-        }
-
-     ?> 
-
-      
-         
-	 </div>
+                            echo $metodo -> registro_civil();
 
 
-	 <div class="col-md-12 mt-5">
+                            break;
 
-                <?php   
+                            case 6:
 
-                   if(isset($c)){
+
+                            break;
+
+                            case 7:
+
+                            echo $metodo -> usuario(); 
+                            
+                            break;
+                       
+                           }
+
+                        }
+
+                     ?> 
+
+
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </article>
+
+              <article class="col-12 mt-3 ">
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, rerum!</p> !-->
+                <div class="card  pt-5 pr-5 pl-5 pb-5" style="border:none;">
+                    <div class="card-block" id="contenedor23">
+                     
+                     <?php
+
+                       if(isset($c)){
 
                        switch($c){
-
                         case 1:
                            
                            echo $metodo->crear_usuario();
-
                         break;
 
                         case 2: 
                            
-                           //echo $metodo->mostrar_usuario();
+                           echo $metodo->mostrar_usuario();
                         
                         break;
                         
                          case 3:
                          
-                         //echo $metodo->crear_usuario();
+                         echo $metodo->crear_usuario();
 
                          break; 
 
                         case 4:
 
-                        //echo $metodo->editar_usuario($usu);
+                        echo $metodo->editar_usuario($usu);
 
                         break;
                         
@@ -324,37 +349,37 @@ if($_SESSION["perfil"] == "administrador"){
 
                         case 6:
 
-                        //echo $metodo -> mostrar_cliente();
+                        echo $metodo -> mostrar_cliente();
 
                         break;
 
                         case 7:
 
-                        //echo $metodo -> ver_requerimiento();
+                        echo $metodo -> ver_requerimiento();
 
                         break;
 
                         case 8:
 
-                        //echo $metodo -> ver_pre_cotizacion($requeri);
+                        echo $metodo -> ver_pre_cotizacion($requeri);
 
                         break;
 
                         case 9:
 
-                        //echo $metodo -> editar_evento($requeri);
+                        echo $metodo -> editar_evento($requeri);
 
                         break;
 
                         case 10:
 
-                        //echo $metodo -> cancelar_evento($requeri);
+                        echo $metodo -> cancelar_evento($requeri);
 
                         break;
 
                         case 11:
 
-                        //echo $metodo -> listado_cotizacion();
+                        echo $metodo -> listado_cotizacion();
 
                         break;
 
@@ -364,18 +389,13 @@ if($_SESSION["perfil"] == "administrador"){
                    
 
                     ?>
-	 
-	 </div>	   
 
+                    </div>
+                </div>    
+              </article>
+        </section>
+  </section>
 
-
-	</section>
-
-    
-
-</section>
-
-   
 			<script src="js/bootstrap.min.js"></script>
 			<script src="js/jquery.min.js"></script>
 			<script src="js/all.js"></script>
@@ -384,8 +404,7 @@ if($_SESSION["perfil"] == "administrador"){
             <script src="js/acordion.js"></script>
 		
             
-                  
-    
+                     
       </body>
 
    </html>
