@@ -17,6 +17,7 @@ if(isset($_SESSION["usuario"])){
 	<title>Superintendencia de Notariado & Registro</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="img/favicon.ico" rel="icon">
 	<link rel="stylesheet" href="css/estiloslogin.css"/>
   <link rel="stylesheet" href="css/all.css"/>
   <link rel="stylesheet" href="css/fonts-awesome.min.css"/>

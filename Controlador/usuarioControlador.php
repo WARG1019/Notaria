@@ -20,20 +20,21 @@
     function seleccion2($tabla,$campo,$cond,$nombre,$id) {
 
        //$ca=$campo.",".$valor;
-        $valor = 0;  
+        $valor = 'administrador';
+        $valor1 = 'secretaria';  
         $cnn = new conexion();
         $con = $cnn -> conectar();
         $sql2 = "select ".$campo." from ".$tabla;
         $r = mysqli_query($con, $sql2);
-        $sel="<select name='".$nombre."'  class='form-control'>";
+        $sel="<select name='".$nombre."' id ='".$id."'  class='form-control'>";
         $sel.="<option value=''>--Seleccione--</option>";
-        while ($res = mysqli_fetch_array($r)) {
-        
 
-       $sel.="<option value =". $res[$campo] .">" . $res[$campo] .  "</option>";
+       $sel.="<option value = administrador >" . $valor .  "</option>";
+
+       $sel.="<option value = secretaria >" . $valor1 .  "</option>";
 
       
-      }
+    
         $sel.="</select>";
 
     return $sel;

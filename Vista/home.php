@@ -33,6 +33,12 @@ if(isset($_POST['c'])){
 
 }
 
+
+
+
+
+
+
 if($_SESSION["perfil"] == "administrador"){
 
 ?>
@@ -43,6 +49,7 @@ if($_SESSION["perfil"] == "administrador"){
 	<meta charset="UTF-8">
 	<title>Superintendencia de Notariado & Registro</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="img/favicon.ico" rel="icon">
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/all.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
@@ -239,7 +246,7 @@ if($_SESSION["perfil"] == "administrador"){
 
   <section class="container contenedor col-md-12 col-md-9 mt-5">
         <section class="row">
-           <article class="col-12 mt-3">
+           <article class="col-sm-12 col-xs-12 col-md-12 mt-3">
               <div class="card pt-5 pr-5 pl-5 pb-5" style="border:none;">
                   <div class="card-block">
                     <div class="container">
@@ -308,7 +315,7 @@ if($_SESSION["perfil"] == "administrador"){
               </div>
             </article>
 
-              <article class="col-12 mt-3 ">
+              <article class="col-xs-12 col-sm-12 col-md-12 mt-3 ">
                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, rerum!</p> !-->
                 <div class="card  pt-5 pr-5 pl-5 pb-5" style="border:none;">
                     <div class="card-block" id="contenedor23">
@@ -401,8 +408,8 @@ if($_SESSION["perfil"] == "administrador"){
 			<script src="js/all.js"></script>
 			<script src="js/fonts-awesome-all.js"></script>
 			<script src="js/metisMenu.js"></script>
-            <script src="js/acordion.js"></script>
-		
+      <script src="js/acordion.js"></script>
+		  <script src="js/insertar.js"></script>
             
                      
       </body>
@@ -736,7 +743,8 @@ if($_SESSION["perfil"] == "administrador"){
 			<script src="js/all.js"></script>
 			<script src="js/fonts-awesome-all.js"></script>
 			<script src="js/metisMenu.js"></script>
-            <script src="js/acordion.js"></script>
+      <script src="js/acordion.js"></script>
+      <script src="js/insertar.js"></script>
 		
             
                   

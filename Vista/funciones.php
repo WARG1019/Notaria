@@ -143,13 +143,20 @@ $user='
 function crear_usuario(){
 
 
-  $creus='
+    
+
+  $creus='    
+             
+             <div class="col-12 col-md-12" id="result">
+
+              </div>
+          
            
               <div class="col-12 col-md-12">
+
                   <br>
                   <h2>Formulario Creacion Usuario</h2>
                    <br>
-                    <form  method="post" action="home.php" id="formcreus">
 
                         <input type="hidden" name="b" value="1">
                         <input type="hidden" name="c" value="3"> 
@@ -158,12 +165,12 @@ function crear_usuario(){
                                                       
                            <div class=" col-10 col-md-5">
                                 <label for="usuario">Nombre de Usuario</label>
-                                    <input type="text"  class="form-control" name="nome" placeholder="Nombre">
+                                    <input type="text"  class="form-control" name="nome" id="nome" placeholder="Nombre">
                             </div>
                               
                                <div class=" col-10 col-md-5">
                                   <label for="apellido ">Apellido</label>
-                                        <input type="text"  class="form-control" name="ape"  placeholder="Apellido"> 
+                                        <input type="text"  class="form-control" name="ape" id="ape"  placeholder="Apellido"> 
                                </div>
                                                   
                       </div>
@@ -174,7 +181,7 @@ function crear_usuario(){
                                                       
                                       <div class=" col-10 ">
                                           <label for="identificacion">Identificacion</label>
-                                            <input type="text"  class="form-control" name="iden" placeholder="Identificacion">
+                                            <input type="text"  class="form-control" name="iden" id="iden" placeholder="Identificacion">
                                     </div>
                                 </div>
 
@@ -183,7 +190,7 @@ function crear_usuario(){
                                   <div class="form-group row">                        
                                     <div class=" col-10">
                                      <label for="correo">Correo</label>
-                                        <input type="text" class="form-control" name="cor" id="email" placeholder="Correo Electronico">
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Correo Electronico">
                                         </div>
                                             
                                   </div>                       
@@ -205,7 +212,7 @@ function crear_usuario(){
                              <div class="col-10">
                                  <label for="perfil">Perfil del Usuario</label>'.
                                    //$this -> input("usuarios","perfil","WHERE perfil = 'administrador'", "nom_usu","", "nom_usu", "text")
-                                   $this->seleccion2("usuarios", "perfil", "", "nom_usu", "nom_usu").
+                                   $this->seleccion2("usuarios", "perfil", "", "perfil", "perfil").
                                    '</div>
                            </div>         
                            
@@ -225,13 +232,13 @@ function crear_usuario(){
                            </div>    
                            
             
-                                      <button class="btn btn-primary  btn-block btn-sm ml-2 mt-5" type="submit" name="gcli" style="width:80%; height:50px;">Guardar</button>
+                                      <button class="btn btn-primary  btn-block btn-sm ml-2 mt-5" type="button" name="nomb_usu" id="nomb_usu" style="width:80%; height:50px;">Guardar Usuario</button>
+                                      <button class="btn btn-primary  btn-block btn-sm ml-2 mt-2" type="button" name="limpia" id="limpia" style="width:80%; height:50px;">Reset</button>
                                 
 
                                  <br>
                                  <br>
 
-                     </form>
                     </div>';
                  echo $creus;
 }
@@ -313,11 +320,11 @@ $registro ='
 function subir_registro(){
 
  $subir = '      
-              <div class="col-md-12">   
+              <div class="col-12 col-md-12">   
                   <br>
                   <h2>Almacenar Registro Civil</h2>
                    <br>
-                    <form  method="post" action="home.php" id="formcreus">
+                    //<form  method="post" action="home.php" id="formcreus">
 
                         <input type="hidden" name="b" value="1">
                         <input type="hidden" name="c" value="3">
@@ -325,7 +332,7 @@ function subir_registro(){
 
                         <div class="form-group row">
                                                       
-                                      <div class=" col-10 ">
+                                      <div class="col-10">
                                           <label for="identificacion">NUIP</label>
                                             <input type="text"  class="form-control" name="iden" placeholder="Identificacion">
                                     </div>
